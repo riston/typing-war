@@ -6,6 +6,7 @@ Runs on every browser which has correctly implemented Canvas API.
 
 ## Screenshot
 
+![Screen](https://raw.githubusercontent.com/riston/typing-war/master/screenshots/screenshot.png)
 
 ## Technology
 
