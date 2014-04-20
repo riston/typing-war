@@ -1,0 +1,100 @@
+/*
+Styles go here
+#244660 #297CC0 #549AC8 #99A9A7 #B1CECA
+*/
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Audiowide'), local('Audiowide-Regular'), url(../fonts/Audiowide/Audiowide-Regular.ttf) format('truetype');
+}
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  font-family: fantasy, sans-serif;
+  background: #263846;
+  overflow: hidden;
+}
+
+canvas {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+}
+
+input {
+  border: 2px solid #549AC8;
+  color: #244660;
+}
+
+button {
+  border: 2px solid #549AC8;
+  background-color: #297CC0;
+  color: #fff;
+}
+
+#canvas {
+   position: relative;
+   margin: 0 auto;
+}
+
+.absolute-center {
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.absolute-center.is-responsive {
+  width: 60%;
+  height: 60%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.menu {
+  background: #244660;
+  color: #FFF;
+  border: 5px solid #549AC8;
+}
+
+.menu h1 {
+  font-size: 5em;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  font-size: 2.5em;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #297CC0;
+}
+
+.menu a:hover {
+
+  color: #ddd;
+}
+
+.show {
+  display: block;
+  z-index: 99999;
+}
+
+.hide {
+  display: none;
+  z-index: 999;
+}
+
+
