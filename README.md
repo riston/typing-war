@@ -2,7 +2,7 @@
 
 The idea of game is to stop propaganda (random words :D) to reach ground. That is the reason you have to type fast.
 
-Runs on every browser which has correctly implemented Canvas API.
+Runs on every browser which has correctly implemented Canvas API. [Demo](riston.github.io/typing-war/)
 
 ## Screenshot
 
