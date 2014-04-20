@@ -4,6 +4,10 @@ The idea of game is to stop propaganda (random words :D) to reach ground. That i
 
 Runs on every browser which has correctly implemented Canvas API.
 
+## Screenshot
+
+
+
 ## Technology
 
 The game is built on top of the HTML5 canvas.
