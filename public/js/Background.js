@@ -5,8 +5,9 @@ define("Background", [
         "image!./public/images/tree-large.png",
         "image!./public/images/bush.png",
         "image!./public/images/spruce.png",
-        "image!./public/images/small-house.png"
-    ], function (HouseImg, GroundImg, TreeImg, TreeLargeImg, BushImg, SpruceImg, SmallHouseImg) {
+        "image!./public/images/small-house.png",
+        "image!./public/images/flag.png",
+    ], function (HouseImg, GroundImg, TreeImg, TreeLargeImg, BushImg, SpruceImg, SmallHouseImg, Flag) {
 
     function Background (game) {
 
@@ -26,6 +27,9 @@ define("Background", [
         ctx.beginPath();
         // Move bottom
         ctx.translate(0, this.game.height - 100);
+
+        // Draw Ukraine flag
+        ctx.drawImage(Flag, 630, -45);
 
         // Draw house
         ctx.drawImage(HouseImg, 50, -50);

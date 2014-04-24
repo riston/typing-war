@@ -12,8 +12,9 @@ define("Game", [
   "Background",
   "Cloud",
   "Score",
-  "Sound" ],
-  function (InputQueue, State, Sylvester, Sprite, Bomb, Stats, Words, Bar, Background, Cloud, Score, Sound) {
+  "Sound",
+  "image!./public/images/html5.png", ],
+  function (InputQueue, State, Sylvester, Sprite, Bomb, Stats, Words, Bar, Background, Cloud, Score, Sound, HtmlImg) {
 
   function Game (element, width, height) {
     this.element = element;
@@ -61,8 +62,8 @@ define("Game", [
     }
 
     // Start timer
-    this.timer = window.setInterval(this.timerTick.bind(this), 3 * 1000);
-
+    // this.timer = window.setInterval(this.timerTick.bind(this), 3 * 1000);
+    this.setTimer();
   };
 
   Game.prototype.add = function() {
@@ -80,6 +81,26 @@ define("Game", [
 
     // Custom event handlers
     document.addEventListener("keydown", this.handleKeyDown.bind(this), false);
+  };
+
+  Game.prototype.setTimer = function () {
+    var _this = this;
+    this.prevTime = new Date().getTime();
+
+    // The outer timer is faster
+    this.timer = window.setInterval(function () {
+
+      // With increasing score the time has smaller value so it will be faster.
+      var current = new Date().getTime(),
+          scoreTimeVal = 3000 - Stats.score * 50;
+
+      if ((current - _this.prevTime) >= scoreTimeVal) {
+
+        _this.timerTick();
+        _this.prevTime = current;
+      }
+
+    }, 100);
   };
 
   Game.prototype.timerTick = function() {
@@ -228,6 +249,8 @@ define("Game", [
     ctx.fillText("Your score: " + Stats.score, tx, ty + 70 * 2);
 
     ctx.restore();
+
+    this.drawHtmlLogo(ctx);
   };
 
   Game.prototype.renderNotStarted = function () {
@@ -254,6 +277,13 @@ define("Game", [
     ctx.fillText("Press ENTER to START game!", tx, ty + 70);
 
     ctx.restore();
+
+    this.drawHtmlLogo(ctx);
+  };
+
+  Game.prototype.drawHtmlLogo = function(ctx) {
+
+    ctx.drawImage(HtmlImg, this.width - 150, 50);
   };
 
   Game.prototype.removeBomb = function (index) {
