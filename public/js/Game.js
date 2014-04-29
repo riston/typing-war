@@ -276,6 +276,10 @@ define("Game", [
     ctx.font = "italic " + 2 + "em Audiowide";
     ctx.fillText("Press ENTER to START game!", tx, ty + 70);
 
+    ctx.font = "italic " + 1.5 + "em Audiowide";
+    ctx.fillText("Small village has being bombarded with propaganda,", tx, ty + 90 * 2);
+    ctx.fillText("to help them type fast and disarm the bombs before they hit a ground!", tx, ty + 70 * 3);
+
     ctx.restore();
 
     this.drawHtmlLogo(ctx);

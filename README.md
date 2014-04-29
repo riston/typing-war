@@ -1,8 +1,8 @@
 # Stop propaganda - game
 
-The idea of game is to stop propaganda (random words :D) to reach ground. That is the reason you have to type fast.
+Small village called Villuga is bombed with propaganda (random words :D). You have to type fast and save the village from these bombs.
 
-Runs on every browser which has correctly implemented Canvas API. [Demo](http://riston.github.io/typing-war/)
+Runs on every browser, which has correctly implemented Canvas API. [Demo](http://riston.github.io/typing-war/)
 
 ## Screenshot
 
