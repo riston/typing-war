@@ -94,6 +94,10 @@ define("Game", [
       var current = new Date().getTime(),
           scoreTimeVal = 3000 - Stats.score * 50;
 
+      if (scoreTimeVal <= 0) {
+        scoreTimeVal = 50;
+      }
+
       if ((current - _this.prevTime) >= scoreTimeVal) {
 
         _this.timerTick();
